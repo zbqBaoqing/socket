@@ -94,7 +94,6 @@ int main()
 				}
 		if (ret <= 0)
 		  break;
-				printf("ret: %d\n", ret);
 				recv_buf[ret] = '\0'; //将数据结束标志'\n'替换成字符串标志
 					printf("client: %s\n", recv_buf);
 					bzero(recv_buf,sizeof(recv_buf));

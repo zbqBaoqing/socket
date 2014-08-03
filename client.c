@@ -69,7 +69,6 @@ int main(int argc, char **argv)
 	    printf("client: ");
 	    scanf("%[^\n]",send_buf);
 	  
-		printf("kkd: %ld\n", strlen(send_buf));
 	  if (send(conn_fd, send_buf, strlen(send_buf), 0) < 0)
 	  {
 		my_err("send", __LINE__);
@@ -85,7 +84,6 @@ int main(int argc, char **argv)
 	{
 		break;
 	}
-	printf("ret: %d\n",ret );
 	recv_buf[ret]='\0';
 	printf("server: %s\n",recv_buf);
 	bzero(recv_buf, sizeof(recv_buf));
